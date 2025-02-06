@@ -11,10 +11,10 @@ st.title("🏡 Prédiction du Prix des Maisons")
 
 # Création des champs d'entrée pour les principales caractéristiques
 surface = st.number_input("Surface en pieds carrés", min_value=500, step=50)
-chambres = st.number_input("Nombre de chambres", min_value=1, max_value=10, step=1)
-sdb = st.number_input("Nombre de salles de bain", min_value=1, max_value=5, step=1)
-garage = st.number_input("Nombre de garages", min_value=0, max_value=5, step=1)
-annee_construction = st.number_input("Année de construction", min_value=1900, max_value=2024, step=1)
+chambres = st.number_input("Nombre de chambres", min_value=1, step=1)
+sdb = st.number_input("Nombre de salles de bain", min_value=1,  step=1)
+garage = st.number_input("Nombre de garages", min_value=0, step=1)
+annee_construction = st.number_input("Année de construction", min_value=1900, max_value=2025, step=1)
 
 # Créer un DataFrame avec toutes les colonnes attendues par le modèle
 data = pd.DataFrame(columns=features_used)
