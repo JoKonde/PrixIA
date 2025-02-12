@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 import pandas as pd
 
-# Charger le modèle et la liste des features utilisées pendant l'entraînement
+# Charger le modèle et la liste des features utilisées pendant l'entraînement TotalBsmtSF
 model = joblib.load("house_price_model.pkl")
 features_used = joblib.load("features_list.pkl")  # Charger les 244 colonnes utilisées à l'entraînement
 
@@ -13,6 +13,7 @@ st.title("🏡 Prédiction du Prix des Maisons")
 surface = st.number_input("Surface en pieds carrés", min_value=500, step=50)
 chambres = st.number_input("Nombre de chambres", min_value=1, step=1)
 sdb = st.number_input("Nombre de salles de bain", min_value=1,  step=1)
+totalBsmtSF = st.number_input("Total BsmtSF", min_value=1,  step=1)
 garage = st.number_input("Nombre de garages", min_value=0, step=1)
 annee_construction = st.number_input("Année de construction", min_value=1900, max_value=2025, step=1)
 
@@ -29,6 +30,8 @@ if "FullBath" in data.columns:
     data["FullBath"] = sdb
 if "GarageCars" in data.columns:
     data["GarageCars"] = garage
+if "TotalBsmtSF" in data.columns:
+    data["TotalBsmtSF"] =totalBsmtSF:
 if "YearBuilt" in data.columns:
     data["YearBuilt"] = annee_construction
 
