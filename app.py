@@ -18,7 +18,7 @@ annee_construction = st.number_input("Année de construction", min_value=1900, m
 
 # Créer un DataFrame avec toutes les colonnes attendues par le modèle
 data = pd.DataFrame(columns=features_used)
-data.loc[0] = 0  # Initialiser toutes les colonnes à zéro
+data.loc[0] = 1 # Initialiser toutes les colonnes à zéro
 
 # Remplir avec les valeurs de l'utilisateur (uniquement si la colonne existe)
 if "GrLivArea" in data.columns:
