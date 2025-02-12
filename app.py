@@ -38,5 +38,5 @@ p=surface+chambres+garage
 # Bouton pour prédire
 if st.button("Prédire le Prix"):
     prediction = model.predict(data)
-    prix = prediction[0] + p
+    prix = prediction[0]+p
     st.success(f"Le prix estimé de la maison est : {prix:,.2f} $")
