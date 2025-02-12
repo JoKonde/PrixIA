@@ -31,7 +31,7 @@ if "FullBath" in data.columns:
 if "GarageCars" in data.columns:
     data["GarageCars"] = garage
 if "TotalBsmtSF" in data.columns:
-    data["TotalBsmtSF"] =totalBsmtSF:
+    data["TotalBsmtSF"] =totalBsmtSF
 if "YearBuilt" in data.columns:
     data["YearBuilt"] = annee_construction
 
